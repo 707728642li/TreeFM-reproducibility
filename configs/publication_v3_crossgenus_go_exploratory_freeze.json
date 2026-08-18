@@ -1,0 +1,144 @@
+{
+  "status": "pass",
+  "created_utc": "2026-07-17T07:17:37.762583+00:00",
+  "scope": "exploratory_crossgenus_orthogroup_go_reporting_corrected_common_26species_namespace",
+  "freeze_version": "2.0",
+  "supersedes_freeze_version": "1.0",
+  "scientific_decision_authority": false,
+  "model_selection_allowed": false,
+  "malus_accessed": false,
+  "main_analysis_freeze_modified": false,
+  "result_summary": {
+    "primary_robust_terms": 52,
+    "nonredundant_leaf_terms": 18,
+    "permutations": 10000,
+    "null_median": 0.0,
+    "null_maximum": 12,
+    "empirical_p": 9.999000099990002e-05
+  },
+  "gates": {
+    "analysis_complete": true,
+    "independent_audit_pass": true,
+    "figure_complete": true,
+    "ten_thousand_permutations": true,
+    "empirical_p_has_valid_permutation_resolution": true,
+    "no_malus_access": true,
+    "no_model_selection_authority": true,
+    "contract_predeclares_exploratory_scope": true,
+    "single_common_namespace_declared": true
+  },
+  "frozen_inputs": {
+    "data/raw/publication_v3_go/ARATH-mod.gaf.gz": {
+      "bytes": 5748846,
+      "sha256": "3320e8b89a98354bc35b6f08f5021ac90aac3100e753af2ee24807a96133232f",
+      "source_url": "https://current.geneontology.org/annotations/gaf/ARATH-mod.gaf.gz"
+    },
+    "data/raw/publication_v3_go/go-basic.obo": {
+      "bytes": 32215811,
+      "sha256": "c72fc198a86983d55e43aac585d1ffdbeb6e3601475b3f18b6045acdc0a0734c",
+      "source_url": "https://current.geneontology.org/ontology/go-basic.obo"
+    },
+    "metadata/publication_v3_prunus_v21_gene_id_bridge.tsv": {
+      "bytes": 2769705,
+      "sha256": "5faeeb42815bef686421c927b6c82d3d1cd0380386a84581c5baa576d53164ba"
+    },
+    "data/processed/orthofinder_benchmark_publication_v3/OrthoFinder/Results_PublicationV3/Orthogroups/Orthogroups.txt": {
+      "bytes": 25425170,
+      "sha256": "e9a861d721623c62198f97e97c5c81812ab2f8489d3d8047e1fe101e24b3d2b0"
+    },
+    "results/metrics/publication_v3_orthogroup_namespace_audit.json": {
+      "bytes": 2355,
+      "sha256": "8d3b8f05cf1c3be7f73b4977c9f2e93118ad4b51f41ad1e5f3c6c53debcb7dcb"
+    },
+    "data/processed/functional/Prunus_publication_v3/promoter_labels.parquet": {
+      "bytes": 4020577,
+      "sha256": "da7d3cf2e29f1304e49457690185be09cd461e1d20f1ed6933f21542d64bf82a"
+    },
+    "data/processed/functional/Pyrus_PRJNA669907/promoter_labels.parquet": {
+      "bytes": 1444437,
+      "sha256": "9870340144a9cb8ad05459817d6392e41ace0734c140a7bf1be1f3fcf11a83d5"
+    }
+  },
+  "frozen_artifacts": {
+    "docs/publication_v3_crossgenus_go_exploratory_contract_v2.md": {
+      "bytes": 4763,
+      "sha256": "7f7cbe01ebc58d781f46a947962b050a64e253fb6da27ba7e78ffb4e15898d70"
+    },
+    "results/metrics/publication_v3_orthogroup_namespace_audit.json": {
+      "bytes": 2355,
+      "sha256": "8d3b8f05cf1c3be7f73b4977c9f2e93118ad4b51f41ad1e5f3c6c53debcb7dcb"
+    },
+    "results/superseded/publication_v3_crossgenus_namespace_mismatch_20260717T070542Z/supersession_manifest.json": {
+      "bytes": 14804,
+      "sha256": "b938150dbf55ba5175827206692442f95fe346667278efd6cf9ea13fbc6b6e4d"
+    },
+    "scripts/221_analyze_publication_v3_crossgenus_go.py": {
+      "bytes": 30950,
+      "sha256": "3bd361f4028a8214a9fe9ecf490f3faf079dc3eed70b14ffcac61ee11899100f"
+    },
+    "scripts/222_verify_publication_v3_crossgenus_go.py": {
+      "bytes": 28675,
+      "sha256": "42e1a17190d97521b9a5a33a407759e3d46b751c5afc6b986025b1253c79209e"
+    },
+    "scripts/223_plot_publication_v3_crossgenus_go.py": {
+      "bytes": 11803,
+      "sha256": "595401337b65a31f299924d0680bb6b57e998d6f2a39b01377c1d0d915422b7f"
+    },
+    "reports/PUBLICATION_V3_CROSSGENUS_GO_EXPLORATORY_20260717_CN.md": {
+      "bytes": 6453,
+      "sha256": "3a669c5227f1259e9b4d74e489e12e9d6f63188067bb51839a80158089486e34"
+    },
+    "results/biological_cases/publication_v3_crossgenus_go/summary.json": {
+      "bytes": 3976,
+      "sha256": "de6ec45479c5020f1f20a20920ded089a8d25b30a70f4e2adc910451b95e0f8a"
+    },
+    "results/biological_cases/publication_v3_crossgenus_go/curated_no_iea_term_enrichment.tsv": {
+      "bytes": 1088375,
+      "sha256": "b6131a399f15bd8b76f3353ec05149d29929918b75adddc67e2ac79de2d9a4ff"
+    },
+    "results/biological_cases/publication_v3_crossgenus_go/curated_no_iea_leave_one_chromosome.tsv": {
+      "bytes": 105781,
+      "sha256": "2945fdeb015200b6e58b90aa7f177eaaca59ab1b989f924d6e16db0c6ec0045d"
+    },
+    "results/biological_cases/publication_v3_crossgenus_go/curated_no_iea_permutation_null.tsv.gz": {
+      "bytes": 22461,
+      "sha256": "b4074ae6cccb908dbafe03479f7da14fbde9ec2cce36d86373d8e62d06c641ee"
+    },
+    "results/biological_cases/publication_v3_crossgenus_go/all_evidence_term_enrichment.tsv": {
+      "bytes": 1132363,
+      "sha256": "be7753a2f7185562df1ae99e05c60bdf46192267cc6026db8a85560816f3500b"
+    },
+    "results/biological_cases/publication_v3_crossgenus_go/all_evidence_leave_one_chromosome.tsv": {
+      "bytes": 130045,
+      "sha256": "f44f7dbaf1157b14b50e1fa392addf406589ad33fc8d597c5555cce90006d5eb"
+    },
+    "results/biological_cases/publication_v3_crossgenus_go/robust_replicated_terms.tsv": {
+      "bytes": 34881,
+      "sha256": "8e8042f1f314c6f4dcba0efca6a384589b5c7a5878147ca6fa8c9507c0437b63"
+    },
+    "results/biological_cases/publication_v3_crossgenus_go/independent_audit.json": {
+      "bytes": 7005,
+      "sha256": "3befc61b6b218afda0036891ad85d1347ce6ee11127c9d1040baead45dd1e7f9"
+    },
+    "results/biological_cases/publication_v3_crossgenus_go/figure_provenance.json": {
+      "bytes": 1857,
+      "sha256": "b7fbdfeed26019749188a977ad54a0b5b295556c6a5feaa81f6751d3772e505e"
+    },
+    "results/tables/publication_v3_crossgenus_go_leaf_terms.tsv": {
+      "bytes": 4847,
+      "sha256": "a5384a1ce5d1f92bd5180ff7dea5d579926713624722a86c7b0d914078b23413"
+    },
+    "figures/publication_v3_crossgenus_go_convergence.png": {
+      "bytes": 668041,
+      "sha256": "12f482ac48b50ab71a13e3a3215f7b58bbfa17419c09b98c0403869720613487"
+    },
+    "figures/publication_v3_crossgenus_go_convergence.pdf": {
+      "bytes": 31155,
+      "sha256": "cfd31f503486a426aea7413c903fbce8fb366878d7ee48410685ff71964b4a9f"
+    },
+    "figures/publication_v3_crossgenus_go_convergence.svg": {
+      "bytes": 65510,
+      "sha256": "d1bfa8c748129e1ccbc8cc5fb31822411bd66ab00e9c8a611802091dd6293f82"
+    }
+  }
+}

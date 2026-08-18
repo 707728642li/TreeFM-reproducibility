@@ -1,0 +1,26 @@
+{
+  "status": "frozen",
+  "manifest_version": 1,
+  "created_utc": "2026-07-17T04:47:27.190236+00:00",
+  "artifact_sha256": {
+    "docs/publication_v3_exploratory_gbox_model_chromatin_integration_plan.md": "482381d3b0c90b4147745c5a541890f5253d4b09c66cc9cd9d80259e249908cc",
+    "docs/publication_v3_gbox_axis_attribution_clarification.md": "0ed76f6fc9622761ae4467da44f38982a27b76e7e46016d9164292e3c81ed309",
+    "docs/publication_v3_exploratory_gbox_chromatin_plan.md": "d31d580de410538da3715524f90662a2464ebb4771ae37fe036e5e6da8fc3682",
+    "scripts/160_analyze_pyrus_gbox_chromatin.py": "34d20f72d73b4ae1e13b4ee7dfb7d837a71133ec01da5d7fc750dafa8f80a1bc",
+    "scripts/169_integrate_publication_v3_gbox_model_chromatin.py": "9dedaa86cd835ab119166815b6e1c633acf2eb9389e0b4f4a29aa69c53b0da35",
+    "scripts/170_watch_and_integrate_publication_v3_gbox_model_chromatin.ps1": "24d14f7ee04b96daabbbdb8bdc71273544ab032a315e51e5d5e109ae8f3972fd",
+    "scripts/171_freeze_publication_v3_gbox_model_chromatin_integration.py": "f1bfe5623e9454cd8b6693149fdfe3f2ac28eec4b2edebbb2ef2b949f9f99fea",
+    "scripts/167_run_wsl_command.ps1": "c48d34a059565820fdc52548d91871ffdbea6d64cee5d054e3389b18b3c89e56"
+  },
+  "main_analysis_freeze_sha256": "304d62eca11678beb8d0910ae4348849df18f4b7596bc6716a203683d671eb99",
+  "model_attribution_freeze_sha256": "3a11881606b7728156e5420ae9abbb97d8042d55313ba4175296cd40790c0776",
+  "primary_statistic": "partial Spearman between exact-G-box model dependence and direction-oriented Pyrus H3K4me3 change",
+  "bootstraps": 2000,
+  "permutations": 5000,
+  "cell_bootstraps": 10000,
+  "confirmatory_endpoints_changed": false,
+  "malus_accessed": false,
+  "input_fingerprint": "9a34c4861133c3832e8bc27d17af56997d854a34cbb63f9c5cc9cca64c1b462f",
+  "chromatin_outcomes_inspected": false,
+  "model_attribution_outcomes_inspected": false
+}

@@ -1,0 +1,41 @@
+{
+  "status": "frozen",
+  "manifest_version": 1,
+  "created_utc": "2026-07-16T22:47:32.3912096Z",
+  "scope": "exploratory_supplementary_independent_prunus_chromatin_replication",
+  "artifact_sha256": {
+    "docs/publication_v3_exploratory_prunus_chromatin_replication_contract.md": "5fd1f045c9f14b531442eaf5e2cf6503d1072966db1cbd6c52f4faf11fcf8df3",
+    "config/publication_v3_functional_accessions.tsv": "07fd0623d9c240b1f55d70643d9246b6f003eab24d04937122e5bea5db3107e9",
+    "docs/publication_v3_pyrus_h3k4me3_mechanistic_contract.md": "7d7d434453a4845ea9abff212195263997707e7dc5629892bbfd67ce027109f3"
+  },
+  "parent_freezes": {
+    "main_analysis": "7051d7084ebcf795dd4db28d41bfb8bc309749a5081a7c5d961265b3b15b64ac",
+    "gbox_model_attribution": "548bf0e781d0307a563f2c8706a20be693de015458a972581a7b0249a6bccb9d"
+  },
+  "studies": {
+    "prespecified_exploratory_replication": {
+      "accession": "GSE190586",
+      "organism": "Prunus persica",
+      "primary_input": "author Dataset S4 H3K4me3 peak table",
+      "endpoint": "770_minus_0_chilling_units"
+    },
+    "independent_sensitivity": {
+      "accession": "GSE141983",
+      "organism": "Prunus avium mapped by authors to Prunus persica v1",
+      "primary_input": "author replicate-level H3K4me3 and H3 TSS-window counts when complete",
+      "endpoint": "january_minus_equal_weight_mean_october_december"
+    }
+  },
+  "permutations": 10000,
+  "gene_bootstraps": 2000,
+  "model_integration_permutations": 5000,
+  "confirmatory_endpoints_changed": false,
+  "main_reporting_contract_changed": false,
+  "pyrus_mechanism_rescue_allowed": false,
+  "malus_accessed": false,
+  "malus_access_allowed": false,
+  "quantitative_supplementary_files_opened_before_freeze": false,
+  "treefm_specific_outcomes_inspected_before_freeze": false,
+  "published_study_summaries_inspected_before_freeze": true,
+  "input_fingerprint": "74d21a9260a58386b8f617f2893ca6a6bd8c14213c5faebd7f05e9a930c30220"
+}

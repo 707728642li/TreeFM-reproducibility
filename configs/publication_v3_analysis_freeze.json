@@ -1,0 +1,284 @@
+{
+  "status": "pass",
+  "version": "1.1",
+  "frozen_utc": "2026-07-17T04:45:28.846936+00:00",
+  "gpu_analysis_frozen": true,
+  "gates": {
+    "pyrus_pipeline_complete": true,
+    "prunus_pipeline_complete": true,
+    "sequence_audit_pass": true,
+    "technical_benchmark_complete": true,
+    "dapt_corpus_complete": true,
+    "pyrus_family_pass": true,
+    "label_gate_pass": true,
+    "prunus_label_gate_pass": true,
+    "prunus_promoter_dataset_pass": true,
+    "prunus_functional_dataset_present": true,
+    "pyrus_functional_dataset_present": true,
+    "array_validation_pass": true,
+    "promoter_signal_pass": true,
+    "dapt_manifest_present": true,
+    "analysis_smoke_pass": true,
+    "functional_smoke_pass": true,
+    "blind_synthesis_smoke_pass": true,
+    "prunus_gene_id_bridge_present": true,
+    "prunus_gene_id_bridge_audit_pass": true
+  },
+  "amendment": {
+    "type": "outcome-independent_identifier_correction",
+    "scope": "Prunus source gene IDs to technical benchmark orthogroups",
+    "primary_all_promoter_endpoint_changed": false,
+    "restored_sensitivities": [
+      "no_shared_orthogroup",
+      "mapped_novel_orthogroup"
+    ],
+    "malus_outcomes_accessed": false
+  },
+  "primary_technical_endpoint": "NovelFamily AUPRC",
+  "primary_functional_endpoint": "leave-one-genus-out robust dormancy AUPRC",
+  "primary_readouts": [
+    "linear",
+    "xgboost"
+  ],
+  "primary_genera": [
+    "hevea_brasiliensis",
+    "prunus_persica",
+    "pyrus_pyrifolia"
+  ],
+  "primary_functional_genera": [
+    "Prunus",
+    "Pyrus"
+  ],
+  "primary_tasks": [
+    "tis",
+    "tts",
+    "splice_donor",
+    "splice_acceptor"
+  ],
+  "confirmatory_seeds": [
+    23,
+    41,
+    59
+  ],
+  "contrasts": {
+    "delta_tree": "Tree - RandomPlant",
+    "woody_control_gain": "Tree - max(Herb, RandomPlant, PhyloGCMatch)"
+  },
+  "numerical_rules": {
+    "technical_auprc_rope": [
+      -0.01,
+      0.01
+    ],
+    "functional_auprc_rope": [
+      -0.02,
+      0.02
+    ],
+    "alpha_two_sided": 0.05,
+    "target_power": 0.8,
+    "paired_arm_correlation_assumption": 0.5,
+    "prevalence_assumption": 0.5,
+    "mde_formula": "(z_0.975 + z_0.80) * sqrt(2*(1-rho)*p*(1-p)/pairs)",
+    "minimum_novel_family_pairs": 636,
+    "pooled_novel_family_pairs_by_task": {
+      "splice_acceptor": 2715,
+      "splice_donor": 2570,
+      "tis": 4709,
+      "tts": 4797
+    },
+    "pooled_mde_by_task": {
+      "splice_acceptor": 0.026883692836881582,
+      "splice_donor": 0.027631679315324485,
+      "tis": 0.02041312506703974,
+      "tts": 0.02022502105487822
+    },
+    "fdr_secondary_family": 0.05
+  },
+  "readout_hyperparameters": {
+    "linear": {
+      "model": "SGDClassifier(log_loss)",
+      "alpha": 0.0001,
+      "penalty": "l2",
+      "average": true,
+      "max_iter": 2000,
+      "tol": 0.0001
+    },
+    "xgboost": {
+      "n_estimators": 1000,
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "tree_method": "hist"
+    },
+    "threshold": "Castanea development maximum MCC"
+  },
+  "functional_readout_hyperparameters": {
+    "representation": "four 512-bp promoter chunks; RCPS-pooled center token; 1536-dimensional concatenation",
+    "linear": {
+      "model": "SGDClassifier(log_loss)",
+      "alpha": 0.0001,
+      "penalty": "l2",
+      "average": true,
+      "max_iter": 2000,
+      "tol": 0.0001
+    },
+    "xgboost": {
+      "n_estimators": 500,
+      "max_depth": 4,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "tree_method": "hist"
+    },
+    "fitting": "all robust labels from the non-heldout genus; no heldout-genus outcome use",
+    "top_k": "number of positives in the evaluated population"
+  },
+  "identity_sensitivities": [
+    "all",
+    "exclude_exact",
+    "exclude_near_0_90",
+    "exclude_near_0_95"
+  ],
+  "functional_population_sensitivities": [
+    "all",
+    "heldout_chromosome_test",
+    "no_shared_orthogroup",
+    "mapped_novel_orthogroup"
+  ],
+  "bootstrap": {
+    "unit": "positive-negative pair block",
+    "replicates": 2000,
+    "primary_family": "logo_novel_family"
+  },
+  "code_sha256": {
+    "scripts/79_process_pyrus_rnaseq_sample.py": "d42adf63e7c8434cec9afddb59183702ef21e8b43a7c77150b45e0b0b03afd3b",
+    "scripts/80_run_pyrus_rnaseq_batch.py": "88669182d79e995c78c24fc4e80d40671930f346974d47c9474fc0f7e4c79dfd",
+    "scripts/83_aggregate_pyrus_star_counts.py": "1359657613fcceae5e10234d6bcfdfcd9a0c2ced53ca6d6d561c988c6fe9ec83",
+    "scripts/84_build_pyrus_robust_labels.R": "23b64d8fe92bf421a4fe826fc5a920d4c4ac363f03697938c882dbaa2497a826",
+    "scripts/86_gate_and_continue_pyrus_pipeline.py": "b6acf4511aab0c8d718a7fbca3a7c83833aeb546e1a55b06ccfe4a4c20e61670",
+    "scripts/87_build_pyrus_promoter_dataset.py": "7f06d1e17c5a2f092d27b14bee1e79358eaafbadd5cbb472119251f2ad19a6f4",
+    "scripts/88_pyrus_promoter_kmer_gate.py": "36b922d5d999a9ff82abb340478c73d45228e387d641244a6b16007265d8a3db",
+    "scripts/91_validate_pyrus_labels_gse34845.py": "6adcf92dc5be9985d4dc242272b58ee70e9eeb3680b83052158468df24ff5d80",
+    "scripts/98_run_incremental_pyrus_orthofinder.py": "0ec5956275769331fe3a9f0cb05b3c93c4a110d0171b2b06d1002ef31cef68ed",
+    "scripts/109_train_plantcad_publication_v3_dapt.py": "4f364fe320d8f79a72e502bafd4e7cafa51cb725449268dada2e74741db584f9",
+    "scripts/114_validate_local_publication_v3_sync.py": "54120c76fed6e2c5aa2e1c45f523f6bdc48ec4448f9586fee100e03e4ceb75c8",
+    "scripts/115_prepare_publication_v3_technical_benchmarks.py": "0d7a082bb85a69859562d645cf3eb8a926d7cfedcb5a2e723bf25159ed2504a5",
+    "scripts/116_extract_plantcad_publication_v3_embeddings.py": "8941cdf1f130b7c74230cbe179f35f7a54eceaf2c44ae75b564fdbd0cf377bca",
+    "scripts/117_train_evaluate_publication_v3_probes.py": "0d528f98b10404d802d42741627c1596f125288d5fd702ce805850b8fec6485c",
+    "scripts/118_compare_publication_v3_arms.py": "4312347b290797afa3ba3b0cf1423b877921697928aefa776707f563a889f97c",
+    "scripts/120_smoke_test_publication_v3_analysis.py": "9ad47e2bfb3165240603b30ee4d5c95719a165ad37bbdefe75963dee895f355f",
+    "scripts/122_watch_sync_and_evaluate_publication_v3.ps1": "0d8e5ac12f6423a0aabbac97c2ef53e2bcf5086ac672f10b3fb904c2ea0e7b25",
+    "scripts/127_prepare_prunus_publication_v3_design.py": "fc6d4f3c937cba992d7ec7331ff215616eb4a6315c21779e9ce6b2d03cb7d230",
+    "scripts/128_build_prunus_publication_v3_robust_labels.R": "18aecf85a00a3bb94196563f512f8d39b3fe6ebeccb21c4033fda17bf46a42e8",
+    "scripts/129_build_prunus_publication_v3_promoter_dataset.py": "0054fed056d3bf8696bd9c44e567a4c10593e3389ea4c45007d9905cc538b007",
+    "scripts/130_run_prunus_publication_v3_label_pipeline.py": "0b4cbdf0108f7c6639809d9d813e6e76f8b57d9882970906be605b5c5102c7c9",
+    "scripts/131_extract_publication_v3_functional_embeddings.py": "9bf41d59d10bafc40ce51964300846fdb3c1dcda4b82f1b3e141079aecbb6d6b",
+    "scripts/132_train_evaluate_publication_v3_functional_probes.py": "ea906e647ff432bd9d38bae974af0c391bf10aa6d45ced1e554491544417a602",
+    "scripts/133_compare_publication_v3_functional_arms.py": "3337819d55e666187e785ee966d02f04f85ba561cbc599c94824bdd7f1161646",
+    "scripts/134_smoke_test_publication_v3_functional_analysis.py": "3af18a5faf2c1f3a045117a056618c9a3495e2334368a8733b3cb46907e79229",
+    "scripts/135_validate_local_publication_v3_functional_sync.py": "5a408fcb505cb63afcd47ff6bcac42e7217d534ff36da31d6397db29ab95417f",
+    "scripts/123_prefetch_pyrus_chipseq_fastq.py": "178b5ff2160d214f5afffc641351ce41296aa57f9256bbafcd9fe8c6c7008dcc",
+    "scripts/124_process_pyrus_chipseq_sample.py": "a1c68553cf5b9932cb5bfca9c74590cde2aa8cf7f1714c55afc075046496813c",
+    "scripts/125_run_pyrus_chipseq_alignment.py": "341255a2ac244aac2d8547c0463107aa120918f680f9c3767d6215caf98a901b",
+    "scripts/126_analyze_pyrus_h3k4me3.py": "42497a60a0d0de1554ff9999b2221dce01a9d87514b91b238251ec952024f3c2",
+    "scripts/136_prefetch_malus_blind_fastq.py": "03af458264cfaa6a0784de1f4803d6a49a4aa8f8abc03b6b18387d2779969046",
+    "scripts/138_freeze_publication_v3_nonmalus_models.py": "f1fc9c90c04ac4697fb7ba9784d33c13d6bf93a188330c99daa477f9258a36a1",
+    "scripts/141_prefetch_pyrus_sra_fallback.py": "f33184ec3679844af1ac286073de8c3ff48c713b33846a4e295686fcbf7373b1",
+    "scripts/142_convert_pyrus_sra_fallback_fastq.py": "608213c579e18a5b6a44e98cd6ec2d9a5162cbee1a9465d9495e34c33bb6544b",
+    "scripts/143_compare_pyrus_sra_fallback_to_ena.py": "d2d197727c8e64739c6180f2c16b869e94732b03d4c18a35699eb31f3d592047",
+    "scripts/144_authorize_malus_blind_unlock.py": "277a5384427ace375ef10b6f0649d99e98b9cb2fd9eacc52d7611a2ba70702ea",
+    "scripts/145_prepare_malus_blind_rnaseq.py": "6790f0fe928f5569a1d6903ea708216789ec78af8558a5b03f2860d7291418cf",
+    "scripts/146_prepare_malus_gse64717_metadata.py": "785bd0f1999dd6c53ac089e7aa2e85dadaadf08dfd6893f5db63aceea6b3e4b0",
+    "scripts/146_build_malus_blind_source_effects.R": "8e41873f8d8db3fa1c714aed20244bce82ba110446fb714b625741c776e6e39f",
+    "scripts/147_finalize_malus_blind_functional_dataset.py": "fde8c38aa8e45541366356bbbbc8ba26addd03320830ffa59146cdb84d10de88",
+    "scripts/148_build_malus_blind_technical_benchmark.py": "13bd806653ad6b866e9cf7faa6060b73544fe496b74bd73589b0efd4cd7891da",
+    "scripts/149_score_malus_blind_once.py": "8d32886d00aa5c7c550093f791cab280bdef52820411fd81562b6e3bc8d0f491",
+    "scripts/150_synthesize_publication_v3_blind_results.py": "7862a7012ce9f862863567afad2d7a3118264414690ee6dc1f2f809e8fa495e6",
+    "scripts/151_watch_and_run_malus_blind_server.py": "5c4757af25dc801cd17621e3102dbc1ac66411ac901df0ae31d31e33d86c3580",
+    "scripts/152_watch_sync_and_score_malus_blind.ps1": "7e2f0d36bec050468405abb71f809f3073bbd4d22664401370028e811e658a4c",
+    "scripts/167_run_wsl_command.ps1": "c48d34a059565820fdc52548d91871ffdbea6d64cee5d054e3389b18b3c89e56",
+    "scripts/176_smoke_test_publication_v3_blind_synthesis.py": "db0f7a2e60986aef7d29aba3e4080131a91a016ddeeb1b2b6ebd865e07de8302",
+    "scripts/154_watch_and_relay_public_fastq.ps1": "5cbfe4df98f3da4483671e1d0409a52094bec866f635144b524e336ef7b9dbb5",
+    "scripts/157_prefetch_convert_pyrus_chip_sra_fallback_local.py": "b04ceb1f1f8e5462f1b27d7c88c8efe3120594416354624af15f592015852201",
+    "scripts/158_watch_relay_pyrus_chip_sra_fallback.ps1": "1851cfcfd4bfd17e79d34ef9c70bcca8431aae04ad4a1880f9468946f0288077",
+    "scripts/159_download_pyrus_chip_sra_windows.ps1": "309726760432854134febcf7066af9a22b74f9c9b74313fd4c416e7c04bb957f",
+    "scripts/160_analyze_pyrus_gbox_chromatin.py": "34d20f72d73b4ae1e13b4ee7dfb7d837a71133ec01da5d7fc750dafa8f80a1bc",
+    "scripts/220_build_prunus_gene_id_bridge.py": "6a491eb04dadcacba3f7dc73a2bef3c383c19e4083704c2da10bd0a1893575aa"
+  },
+  "artifacts": {
+    "technical_mde": {
+      "path": "metadata/publication_v3_technical_mde.tsv",
+      "sha256": "c2977cd3b1b24f0b9ed5af52512702f8dea0ba05b3f78642458202b0ccce783e"
+    },
+    "dapt_manifest": {
+      "path": "data/processed/publication_v3_dapt_hf/manifest.tsv",
+      "sha256": "a90af2b64b4a62173dc0581195abf6fd1c8e2d89b3aa7c99c552f8789a20074c"
+    },
+    "malus_blind_lock": {
+      "path": "config/publication_v3_malus_blind_lock.json",
+      "sha256": "a20d7e26591ccbb089a97939ed8b97890bb9472e7123aa3cdc4a4542ab55b35d"
+    },
+    "analysis_smoke": {
+      "path": "results/metrics/publication_v3_analysis_smoke.json",
+      "sha256": "ead73f50838525191f68e8eaff1b975faa5bedc9c29e8f7b9b1d63ec1b139f41"
+    },
+    "functional_smoke": {
+      "path": "results/metrics/publication_v3_functional_smoke.json",
+      "sha256": "2ede88631d7a4205daaf7204e3a3fee52482b961a03b5536bb8bd42b5f4fffa1"
+    },
+    "blind_synthesis_smoke": {
+      "path": "results/metrics/publication_v3_blind_synthesis_smoke.json",
+      "sha256": "108bfde466b89862b2d4e0bde87911d115a01179c67b9e06be2170d9fb8817cf"
+    },
+    "prunus_gene_id_bridge": {
+      "path": "metadata/publication_v3_prunus_v21_gene_id_bridge.tsv",
+      "sha256": "5faeeb42815bef686421c927b6c82d3d1cd0380386a84581c5baa576d53164ba"
+    },
+    "prunus_gene_id_bridge_audit": {
+      "path": "results/metrics/publication_v3_prunus_gene_id_bridge_audit.json",
+      "sha256": "9e98323d841c9867f4eb23a4318df01e48a9fde729ce7782aa1adfd8e82b5ce8"
+    },
+    "prunus_gene_id_bridge_contract": {
+      "path": "docs/publication_v3_prunus_gene_id_bridge_contract.md",
+      "sha256": "37b4794ba8dc998efa853f81742665ef87f9344ae1b096f7c250bf0ba7bfd19d"
+    },
+    "functional_analysis_contract": {
+      "path": "docs/publication_v3_functional_analysis_contract.md",
+      "sha256": "4f3450d6fa61af2141577c7b1570b27979fcfba47e6a207f31dd47816c4322c1"
+    },
+    "prunus_label_contract": {
+      "path": "docs/publication_v3_prunus_functional_label_contract.md",
+      "sha256": "3376be538efdabd28be37969d1ad8a280f627eabefc5864cd0cc5a05e0ec022d"
+    },
+    "malus_blind_outcome_contract": {
+      "path": "docs/publication_v3_malus_blind_outcome_contract.md",
+      "sha256": "b9041f7566a8c695b3195c33a5ac2d392edb037bd25bc1b26625ea7dbcb7e931"
+    },
+    "pyrus_sra_fallback_contract": {
+      "path": "docs/publication_v3_pyrus_sra_fallback_contract.md",
+      "sha256": "95ed183e7223fd268c734c054349efde2dca2515001134f311c3c5f2a73c44a8"
+    },
+    "pyrus_chip_sra_fallback_contract": {
+      "path": "docs/publication_v3_pyrus_chip_sra_fallback_contract.md",
+      "sha256": "b481d3c44daf90c00607f5a0805f66d9739673aadd693abfe0a751b2f1cda0f3"
+    },
+    "pyrus_h3k4me3_mechanistic_contract": {
+      "path": "docs/publication_v3_pyrus_h3k4me3_mechanistic_contract.md",
+      "sha256": "7d7d434453a4845ea9abff212195263997707e7dc5629892bbfd67ce027109f3"
+    },
+    "exploratory_gbox_chromatin_plan": {
+      "path": "docs/publication_v3_exploratory_gbox_chromatin_plan.md",
+      "sha256": "d31d580de410538da3715524f90662a2464ebb4771ae37fe036e5e6da8fc3682"
+    },
+    "decision_log": {
+      "path": "docs/decision_log.md",
+      "sha256": "15fcb20d23a1c608cead805a9334131b840913c7d041db8621343151ff392651"
+    },
+    "prunus_functional_dataset": {
+      "path": "data/processed/functional/Prunus_publication_v3/promoter_labels.parquet",
+      "sha256": "da7d3cf2e29f1304e49457690185be09cd461e1d20f1ed6933f21542d64bf82a"
+    },
+    "pyrus_functional_dataset": {
+      "path": "data/processed/functional/Pyrus_PRJNA669907/promoter_labels.parquet",
+      "sha256": "9870340144a9cb8ad05459817d6392e41ace0734c140a7bf1be1f3fcf11a83d5"
+    }
+  }
+}

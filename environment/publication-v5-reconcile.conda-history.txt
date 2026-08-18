@@ -1,0 +1,11 @@
+==> 2026-08-03 20:41:33 <==
+# cmd: create a project-prefix environment from the package history below
+# conda version: 3.8.0
++https://conda.anaconda.org/conda-forge/linux-64::libgomp-15.2.0-he0feb66_19
++https://conda.anaconda.org/conda-forge/linux-64::_openmp_mutex-4.5-20_gnu
++https://conda.anaconda.org/conda-forge/linux-64::libgcc-15.2.0-he0feb66_19
++https://conda.anaconda.org/conda-forge/linux-64::libstdcxx-15.2.0-h934c35e_19
++https://conda.anaconda.org/conda-forge/linux-64::libgcc-ng-15.2.0-h69a702a_19
++https://conda.anaconda.org/conda-forge/linux-64::libstdcxx-ng-15.2.0-hdf11a46_19
++https://conda.anaconda.org/bioconda/linux-64::treerecs-1.2-h9f5acd7_3
+# update specs: ["treerecs"]

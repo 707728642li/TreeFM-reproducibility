@@ -1,0 +1,59 @@
+# Data and generated artifacts
+data/
+results/
+output/
+outputs/
+figures/
+images/
+models/
+checkpoints/
+embeddings/
+logs/
+tmp/
+cache/
+.cache/
+
+# Manuscript and submission material
+manuscript/
+submission/
+supplement/
+review/
+reports/
+*.docx
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.tif
+*.tiff
+*.pptx
+*.zip
+
+# Python/R/tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.Rhistory
+.RData
+.ipynb_checkpoints/
+
+# Local environments and secrets
+envs/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.token
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

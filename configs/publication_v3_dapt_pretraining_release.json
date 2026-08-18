@@ -1,0 +1,114 @@
+{
+  "status": "pass",
+  "scope": "unsupervised_dapt_only",
+  "frozen_utc": "2026-07-16T16:48:10.321697+00:00",
+  "gpu_pretraining_released": true,
+  "dapt_corpus_qc": true,
+  "outcome_data_permitted": false,
+  "embedding_or_probe_evaluation_permitted": false,
+  "analysis_freeze_still_required": true,
+  "gates": {
+    "corpus_controller_complete": true,
+    "corpus_gate_pass": true,
+    "split_policy_pass": true,
+    "manifest_shape_pass": true,
+    "all_corpus_hashes_match": true
+  },
+  "failed_gates": [],
+  "training_contract": {
+    "backbone": "PlantCaduceus_l20",
+    "arms": [
+      "tree",
+      "herb",
+      "random_plant",
+      "phylogc_match"
+    ],
+    "seeds": [
+      23,
+      41,
+      59
+    ],
+    "max_steps_per_run": 15000,
+    "world_size": 2,
+    "local_gpu_only": true,
+    "sequence_length": 512,
+    "mlm_probability": 0.15,
+    "learning_rate": 1e-05,
+    "warmup_ratio": 0.05,
+    "weight_decay": 0.01,
+    "per_device_batch_size": 16,
+    "gradient_accumulation_steps": 2
+  },
+  "artifacts": {
+    "corpus_controller": {
+      "path": "results/metrics/publication_v3_dapt_corpus_controller.json",
+      "sha256": "3fdd8b637ddc99d5de79e7d268f86247d29860ae6091dd5f1a49f28b72139a02"
+    },
+    "corpus_gate": {
+      "path": "metadata/publication_v3_dapt_corpus_gate.json",
+      "sha256": "d6aa71253431e76032d5c32eeeb6d24cfed5abc5b99a11e4d035fa6e8c1f9830"
+    },
+    "manifest": {
+      "path": "data/processed/publication_v3_dapt_hf/manifest.tsv",
+      "sha256": "a90af2b64b4a62173dc0581195abf6fd1c8e2d89b3aa7c99c552f8789a20074c"
+    },
+    "split_policy": {
+      "path": "data/processed/publication_v3_dapt_hf/split_policy.json",
+      "sha256": "73e8d58e4dd1a9a229f50449b9515c99f43facc540623b592ccb580221abb8e6"
+    },
+    "training_script": {
+      "path": "scripts/109_train_plantcad_publication_v3_dapt.py",
+      "sha256": "4f364fe320d8f79a72e502bafd4e7cafa51cb725449268dada2e74741db584f9"
+    }
+  },
+  "corpus_files": [
+    {
+      "path": "data/processed/publication_v3_dapt_hf/tree/validation.parquet",
+      "expected_sha256": "862c7f44d8a62765c488d12f02e2a18c9b3244fa619b2bd9a966224ad372d6b4",
+      "observed_sha256": "862c7f44d8a62765c488d12f02e2a18c9b3244fa619b2bd9a966224ad372d6b4",
+      "passed": true
+    },
+    {
+      "path": "data/processed/publication_v3_dapt_hf/tree/train.parquet",
+      "expected_sha256": "66712740cc9dfeb70137eec49287e129197c2e2fb38a7463e62d7440be799469",
+      "observed_sha256": "66712740cc9dfeb70137eec49287e129197c2e2fb38a7463e62d7440be799469",
+      "passed": true
+    },
+    {
+      "path": "data/processed/publication_v3_dapt_hf/herb/validation.parquet",
+      "expected_sha256": "42ac1102e94eff8865c3201def07a3fdda6dc1f0b1f5ee76d7619c01f2fcf6c2",
+      "observed_sha256": "42ac1102e94eff8865c3201def07a3fdda6dc1f0b1f5ee76d7619c01f2fcf6c2",
+      "passed": true
+    },
+    {
+      "path": "data/processed/publication_v3_dapt_hf/herb/train.parquet",
+      "expected_sha256": "1ef6ab2bff24fae7ebcb8f19918f553245c723e02f89a356b468a17bc252a1f8",
+      "observed_sha256": "1ef6ab2bff24fae7ebcb8f19918f553245c723e02f89a356b468a17bc252a1f8",
+      "passed": true
+    },
+    {
+      "path": "data/processed/publication_v3_dapt_hf/random_plant/validation.parquet",
+      "expected_sha256": "2915f946e51d3cb2f1b9b830d267f356158394011e33efe31141272f17ab6ed1",
+      "observed_sha256": "2915f946e51d3cb2f1b9b830d267f356158394011e33efe31141272f17ab6ed1",
+      "passed": true
+    },
+    {
+      "path": "data/processed/publication_v3_dapt_hf/random_plant/train.parquet",
+      "expected_sha256": "cd556241f6ddc17aa68dc6a9b7f887c7541bb7c3a0290ce89497f06e5f06f5e1",
+      "observed_sha256": "cd556241f6ddc17aa68dc6a9b7f887c7541bb7c3a0290ce89497f06e5f06f5e1",
+      "passed": true
+    },
+    {
+      "path": "data/processed/publication_v3_dapt_hf/phylogc_match/validation.parquet",
+      "expected_sha256": "32d6d34290eee48ac99eb85604f43100f70d64c46d60b05e0ef726b5fc065409",
+      "observed_sha256": "32d6d34290eee48ac99eb85604f43100f70d64c46d60b05e0ef726b5fc065409",
+      "passed": true
+    },
+    {
+      "path": "data/processed/publication_v3_dapt_hf/phylogc_match/train.parquet",
+      "expected_sha256": "ca1fb96722a74db27527a929170e27934bb2c03f5d4e367861727a258bb3df4d",
+      "observed_sha256": "ca1fb96722a74db27527a929170e27934bb2c03f5d4e367861727a258bb3df4d",
+      "passed": true
+    }
+  ]
+}

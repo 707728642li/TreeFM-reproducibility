@@ -1,0 +1,185 @@
+{
+  "status": "pass",
+  "created_utc": "2026-07-17T07:25:54.258703+00:00",
+  "scope": "model_independent_crossgenus_candidate_catalog_corrected_common_26species_namespace",
+  "freeze_version": "2.0",
+  "supersedes_freeze_version": "1.0",
+  "scientific_decision_authority": false,
+  "model_selection_allowed": false,
+  "model_outputs_accessed": false,
+  "malus_accessed": false,
+  "main_analysis_freeze_modified": false,
+  "go_exploratory_freeze_modified": false,
+  "result_summary": {
+    "candidate_orthogroups": 111,
+    "tier_counts": {
+      "A": 14,
+      "B": 38,
+      "C": 49,
+      "D": 10
+    },
+    "tier_a_families": [
+      "OG0000025",
+      "OG0000191",
+      "OG0000413",
+      "OG0000350",
+      "OG0004506",
+      "OG0000215",
+      "OG0000277",
+      "OG0001301",
+      "OG0001507",
+      "OG0000208",
+      "OG0000742",
+      "OG0000139",
+      "OG0000692",
+      "OG0000083"
+    ],
+    "strict_matched_controls": 6,
+    "strict_unmatched_tier_a_candidates": 8
+  },
+  "dependency_freezes": {
+    "config/publication_v3_analysis_freeze.json": "304d62eca11678beb8d0910ae4348849df18f4b7596bc6716a203683d671eb99",
+    "config/publication_v3_crossgenus_go_exploratory_freeze.json": "a0d61c21f5fa1559cf367c0c5e2ebdd353f2bf9ebe602b113b28b40e8727cf04"
+  },
+  "gates": {
+    "catalog_pass": true,
+    "catalog_gate_pass": true,
+    "independent_audit_pass": true,
+    "figure_pass": true,
+    "candidate_count_reconstructed": true,
+    "tier_counts_exact": true,
+    "strict_match_result_reconstructed": true,
+    "all_candidate_fields_reconstructed": true,
+    "no_model_access": true,
+    "no_malus_access": true,
+    "main_analysis_freeze_unchanged": true,
+    "go_exploratory_freeze_current_and_pinned": true,
+    "contract_was_frozen_before_identities": true,
+    "single_common_namespace_declared": true,
+    "all_input_hashes_reconfirmed": true
+  },
+  "frozen_inputs": {
+    "docs/publication_v3_crossgenus_candidate_catalog_contract_v2.md": {
+      "bytes": 4529,
+      "sha256": "ce1b3861b6ddf14b1dfa6106b6f3581624f61a957db39f321463c448957d4d70"
+    },
+    "scripts/222_verify_publication_v3_crossgenus_go.py": {
+      "bytes": 28675,
+      "sha256": "42e1a17190d97521b9a5a33a407759e3d46b751c5afc6b986025b1253c79209e"
+    },
+    "data/processed/functional/Prunus_publication_v3/promoter_labels.parquet": {
+      "bytes": 4020577,
+      "sha256": "da7d3cf2e29f1304e49457690185be09cd461e1d20f1ed6933f21542d64bf82a"
+    },
+    "data/processed/functional/Pyrus_PRJNA669907/promoter_labels.parquet": {
+      "bytes": 1444437,
+      "sha256": "9870340144a9cb8ad05459817d6392e41ace0734c140a7bf1be1f3fcf11a83d5"
+    },
+    "metadata/publication_v3_prunus_v21_gene_id_bridge.tsv": {
+      "bytes": 2769705,
+      "sha256": "5faeeb42815bef686421c927b6c82d3d1cd0380386a84581c5baa576d53164ba"
+    },
+    "data/processed/orthofinder_benchmark_publication_v3/OrthoFinder/Results_PublicationV3/Orthogroups/Orthogroups.txt": {
+      "bytes": 25425170,
+      "sha256": "e9a861d721623c62198f97e97c5c81812ab2f8489d3d8047e1fe101e24b3d2b0"
+    },
+    "results/metrics/publication_v3_orthogroup_namespace_audit.json": {
+      "bytes": 2355,
+      "sha256": "8d3b8f05cf1c3be7f73b4977c9f2e93118ad4b51f41ad1e5f3c6c53debcb7dcb"
+    },
+    "data/raw/publication_v3_go/ARATH-mod.gaf.gz": {
+      "bytes": 5748846,
+      "sha256": "3320e8b89a98354bc35b6f08f5021ac90aac3100e753af2ee24807a96133232f"
+    },
+    "data/raw/publication_v3_go/go-basic.obo": {
+      "bytes": 32215811,
+      "sha256": "c72fc198a86983d55e43aac585d1ffdbeb6e3601475b3f18b6045acdc0a0734c"
+    },
+    "results/tables/publication_v3_crossgenus_go_leaf_terms.tsv": {
+      "bytes": 4847,
+      "sha256": "a5384a1ce5d1f92bd5180ff7dea5d579926713624722a86c7b0d914078b23413"
+    },
+    "config/publication_v3_crossgenus_go_exploratory_freeze.json": {
+      "bytes": 6354,
+      "sha256": "a0d61c21f5fa1559cf367c0c5e2ebdd353f2bf9ebe602b113b28b40e8727cf04"
+    },
+    "config/publication_v3_analysis_freeze.json": {
+      "bytes": 14340,
+      "sha256": "304d62eca11678beb8d0910ae4348849df18f4b7596bc6716a203683d671eb99"
+    }
+  },
+  "frozen_artifacts": {
+    "docs/publication_v3_crossgenus_candidate_catalog_contract_v2.md": {
+      "bytes": 4529,
+      "sha256": "ce1b3861b6ddf14b1dfa6106b6f3581624f61a957db39f321463c448957d4d70"
+    },
+    "results/metrics/publication_v3_orthogroup_namespace_audit.json": {
+      "bytes": 2355,
+      "sha256": "8d3b8f05cf1c3be7f73b4977c9f2e93118ad4b51f41ad1e5f3c6c53debcb7dcb"
+    },
+    "results/superseded/publication_v3_crossgenus_namespace_mismatch_20260717T070542Z/supersession_manifest.json": {
+      "bytes": 14804,
+      "sha256": "b938150dbf55ba5175827206692442f95fe346667278efd6cf9ea13fbc6b6e4d"
+    },
+    "scripts/234_build_publication_v3_crossgenus_candidate_catalog.py": {
+      "bytes": 32091,
+      "sha256": "763fd104eea5810434ba3ce9e75a76030e5748141383502f7370167ee550ac59"
+    },
+    "scripts/235_verify_publication_v3_crossgenus_candidate_catalog.py": {
+      "bytes": 24217,
+      "sha256": "f6e1cbb87df0c44e3a96bedcd467ca5ae62aa0b1cc60d337ed52dc8a08f2946b"
+    },
+    "scripts/236_plot_publication_v3_crossgenus_candidate_catalog.py": {
+      "bytes": 11487,
+      "sha256": "b72871e0dfc338c9bd27cf5a4cadf85e4465bd8b4a8e9e7e40e6cd1c3c59a09c"
+    },
+    "scripts/237_freeze_publication_v3_crossgenus_candidate_catalog.py": {
+      "bytes": 8396,
+      "sha256": "d36c4e4113fc9093a6242b552901da09d900aef21c28db8eb08744a45134e64d"
+    },
+    "scripts/238_validate_publication_v3_crossgenus_candidate_freeze.py": {
+      "bytes": 5707,
+      "sha256": "330d48de15b307b16ef8808ad88ed6a5d357a57ac526ea27ce0023aef9df1c56"
+    },
+    "reports/PUBLICATION_V3_CROSSGENUS_CANDIDATE_CATALOG_20260717_CN.md": {
+      "bytes": 7106,
+      "sha256": "d0aa030bd2c6662ed21d684bb8fd8cc1e47972eb9bed6a54a5237c21350d4a34"
+    },
+    "results/biological_cases/publication_v3_crossgenus_candidates/candidate_orthogroups.tsv": {
+      "bytes": 50155,
+      "sha256": "7caa087031c9b64bc39a11c7e478d259b9ae023cb8d80846f3f5f18e101c397f"
+    },
+    "results/biological_cases/publication_v3_crossgenus_candidates/tier_a_candidates.tsv": {
+      "bytes": 9459,
+      "sha256": "81f6bb3578b387c7cb3c61ce2263c45b754caa337f4ade593ceb82399bdf18f8"
+    },
+    "results/biological_cases/publication_v3_crossgenus_candidates/matched_negative_controls.tsv": {
+      "bytes": 3557,
+      "sha256": "424fb2b7dfb06dc909e9b1a716ef416f2f480fabfba5ab90afdbe4a5a48ef0ed"
+    },
+    "results/biological_cases/publication_v3_crossgenus_candidates/summary.json": {
+      "bytes": 4614,
+      "sha256": "f9cbb96bf40bff3db93e28257c79b7092abfd36fbf347be614b933e93f03ca6f"
+    },
+    "results/biological_cases/publication_v3_crossgenus_candidates/independent_audit.json": {
+      "bytes": 1872,
+      "sha256": "e44fc39e31e69610cfee0cb002a3b28586d0adc9760e7457a9ec7326a5d38312"
+    },
+    "results/biological_cases/publication_v3_crossgenus_candidates/figure_provenance.json": {
+      "bytes": 1348,
+      "sha256": "2a550da3fa2c523740cf699da5db947ef86bbda30a32a02d2a9f2185987172e1"
+    },
+    "figures/publication_v3_crossgenus_candidates.png": {
+      "bytes": 413938,
+      "sha256": "6228d5d27b62cfe714ef0f5f7f562fb6136b589c5498a3bdd87567cbdfdd1c7f"
+    },
+    "figures/publication_v3_crossgenus_candidates.pdf": {
+      "bytes": 30368,
+      "sha256": "29e60f27d0ea10ab45f7f62d825d4c8d9bc25f650695e86df860959e84136826"
+    },
+    "figures/publication_v3_crossgenus_candidates.svg": {
+      "bytes": 63266,
+      "sha256": "e6672b5377852c5f4a3603bb3f34bcf66b2e12cd59cc7e1ee3c845795d5edfea"
+    }
+  }
+}

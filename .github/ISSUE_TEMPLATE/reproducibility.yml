@@ -1,0 +1,39 @@
+name: Reproducibility question
+description: Report a code, environment, or method-reconstruction problem.
+title: "[reproducibility] "
+labels: ["reproducibility"]
+body:
+  - type: dropdown
+    id: module
+    attributes:
+      label: Analysis module
+      options:
+        - Data and corpora
+        - Pretraining and embeddings
+        - Functional benchmarks
+        - Statistical analysis
+        - Biological interpretation
+        - Comparative extensions
+        - Environment or provenance
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and observed behavior
+      description: Remove personal paths, credentials, and restricted data before posting.
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, relevant package versions, CPU/GPU model if applicable.
+    validations:
+      required: true

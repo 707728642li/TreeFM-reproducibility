@@ -1,0 +1,27 @@
+name: treefm-repro
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.11
+  - r-base=4.3
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - xgboost
+  - pytorch
+  - transformers
+  - biopython
+  - pyarrow
+  - matplotlib
+  - seaborn
+  - pyyaml
+  - tqdm
+  - joblib
+  - pytest
+  - r-data.table
+  - r-deseq2
+  - pip

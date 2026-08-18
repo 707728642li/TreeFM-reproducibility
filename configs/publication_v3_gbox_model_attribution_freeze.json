@@ -1,0 +1,48 @@
+{
+  "status": "frozen",
+  "manifest_version": 1,
+  "created_utc": "2026-07-17T04:47:26.881877+00:00",
+  "artifact_sha256": {
+    "docs/publication_v3_exploratory_gbox_model_attribution_plan.md": "487582b1ea8a7605ce7ddf693e2f4b40efc8e3f88849a07cfa47f56457c57e47",
+    "docs/publication_v3_gbox_axis_attribution_clarification.md": "0ed76f6fc9622761ae4467da44f38982a27b76e7e46016d9164292e3c81ed309",
+    "scripts/161_prepare_publication_v3_gbox_mutagenesis.py": "69252b0fde1a1a17f8687ee1188f1f9a91a0cd66336462ac1d397030114ef002",
+    "scripts/162_extract_publication_v3_gbox_mutagenesis_embeddings.py": "2b7285ebdd1ccdd0abd6557db87ed2eb8c8186c6442a4ce3f819679df1378965",
+    "scripts/163_score_publication_v3_gbox_model_attribution.py": "1a413b9d16221d81d8e097add175c10274c21b158774947e91381dc6b1fcafdd",
+    "scripts/164_compare_publication_v3_gbox_model_attribution.py": "dbd427122018083e3f6f28f2cfbe7c26ec8d9621df6d01d1ce35e6908b7de8db",
+    "scripts/165_watch_and_run_publication_v3_gbox_model_attribution.ps1": "f8968570f99cc7a409f0da5e03f68688af9c456d520ea65602c29661180966c9",
+    "scripts/166_freeze_publication_v3_gbox_model_attribution.py": "0c7271427c7c7079c84a5c97d8c42fca5b3efae3d544ed9ec0a72e853db4285c",
+    "scripts/167_run_wsl_command.ps1": "c48d34a059565820fdc52548d91871ffdbea6d64cee5d054e3389b18b3c89e56",
+    "data/processed/functional/publication_v3_gbox_mutagenesis/promoter_variants.parquet": "0a81021b848fcd0cd99546e0eea175f76c9ff891e37f92e431b11d64b0681906",
+    "data/processed/functional/publication_v3_gbox_mutagenesis/manifest.json": "300d8418ab4833823e062463eb9530e8c91943db8f8810ac1beda8b29571c1c1",
+    "data/processed/functional/publication_v3_gbox_mutagenesis/excluded_genes.tsv": "b3ce00751d8fe9c013364886d246c0f2c7f97c677da459b5d3216e69855e24fe",
+    "data/processed/functional/Prunus_publication_v3/promoter_labels.parquet": "da7d3cf2e29f1304e49457690185be09cd461e1d20f1ed6933f21542d64bf82a",
+    "data/processed/functional/Pyrus_PRJNA669907/promoter_labels.parquet": "9870340144a9cb8ad05459817d6392e41ace0734c140a7bf1be1f3fcf11a83d5"
+  },
+  "analysis_freeze_sha256": "304d62eca11678beb8d0910ae4348849df18f4b7596bc6716a203683d671eb99",
+  "mutation_input_fingerprint": "5a45b554fb67d9bcddee1a329e4f1d823d0090597264daa90e713cd4e1a828a6",
+  "motif": "CACGTG",
+  "disrupted_motif": "CAGCTG",
+  "control_replicates": 10,
+  "primary_quantity": "median matched-control probability delta minus exact CACGTG-disruption probability delta",
+  "confirmatory_endpoints_changed": false,
+  "malus_accessed": false,
+  "input_fingerprint": "26d9548cfef6628b5d2f9a042fe16c1e00f9d3518a9e592728733083edee54f3",
+  "retained_genes": 1584,
+  "variant_rows": 17424,
+  "by_genus": {
+    "prunus": {
+      "retained_genes": 815,
+      "positives": 196,
+      "negatives": 619,
+      "variant_rows": 8965
+    },
+    "pyrus": {
+      "retained_genes": 769,
+      "positives": 611,
+      "negatives": 158,
+      "variant_rows": 8459
+    }
+  },
+  "downstream_functional_outcomes_inspected": false,
+  "pyrus_h3k4me3_outcomes_inspected": false
+}

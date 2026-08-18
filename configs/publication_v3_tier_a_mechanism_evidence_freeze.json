@@ -1,0 +1,138 @@
+{
+  "status": "pass",
+  "freeze_version": "1.0",
+  "created_utc": "2026-07-17T08:13:17.879989+00:00",
+  "scope": "retrospective_fixed_tier_a_mechanism_evidence",
+  "selection_authority": false,
+  "model_selection_allowed": false,
+  "candidate_reranking_allowed": false,
+  "model_outputs_accessed": false,
+  "malus_accessed": false,
+  "result_summary": {
+    "candidate_count": 14,
+    "candidate_order": [
+      "OG0000025",
+      "OG0000191",
+      "OG0000413",
+      "OG0000350",
+      "OG0004506",
+      "OG0000215",
+      "OG0000277",
+      "OG0001301",
+      "OG0001507",
+      "OG0000208",
+      "OG0000742",
+      "OG0000139",
+      "OG0000692",
+      "OG0000083"
+    ],
+    "strict_matched_controls": 6,
+    "pfam_support_counts": {
+      "cross_genus_anchor_supported": 12,
+      "unresolved": 1,
+      "partial": 1
+    },
+    "all_conserved_endpoint_down": true
+  },
+  "gates": {
+    "contract_limits_scope_to_postselection_interpretation": true,
+    "candidate_freeze_v2_current": true,
+    "annotation_freeze_v2_current": true,
+    "independent_reimplementation_pass": true,
+    "all_14_candidates_retained": true,
+    "frozen_rank_order_preserved": true,
+    "strict_controls_not_relaxed": true,
+    "corrected_literature_dois_verified": true,
+    "figure_visually_inspected": true,
+    "figure_no_overlap_or_clipping_observed": true,
+    "no_model_access": true,
+    "no_malus_access": true
+  },
+  "visual_inspection": {
+    "status": "pass",
+    "inspected_utc": "2026-07-17T08:13:17.880008+00:00",
+    "artifact": "figures/publication_v3_tier_a_evidence_matrix.png",
+    "note": "All 14 rows, headers, legends, endpoint caveat, and categorical badges are legible; no overlap or clipping observed after legend-spacing correction."
+  },
+  "frozen_inputs": {
+    "docs/publication_v3_tier_a_mechanism_evidence_contract_v1.md": {
+      "bytes": 2820,
+      "sha256": "fe9058c0a3b9a635cd958031b833a51bec74b4e936f4ff8be0d412581c844875"
+    },
+    "config/publication_v3_crossgenus_candidate_catalog_freeze.json": {
+      "bytes": 7571,
+      "sha256": "33eba0c51b4ea4edd3af55ded5ae03979e1a44966771586576cccefc0806e5c8"
+    },
+    "config/publication_v3_tier_a_postselection_annotation_freeze.json": {
+      "bytes": 3310,
+      "sha256": "e6d4fdcbae3c868bb6ef48ad81dcb9705d0070a16b7afd6e05f564bfd357da7d"
+    },
+    "results/biological_cases/publication_v3_crossgenus_candidates/tier_a_candidates.tsv": {
+      "bytes": 9459,
+      "sha256": "81f6bb3578b387c7cb3c61ce2263c45b754caa337f4ade593ceb82399bdf18f8"
+    },
+    "results/biological_cases/publication_v3_tier_a_annotation/domain_summary.json": {
+      "bytes": 7156,
+      "sha256": "fc3050f440105c4dcdbb57a64d2fec035048267dd6c6679c807be5629240ff3f"
+    },
+    "results/biological_cases/publication_v3_tier_a_annotation/orthogroup_domain_consensus.tsv": {
+      "bytes": 5376,
+      "sha256": "ce1256ad60f05e8bf8f63dd00b7a44ed7541965e9e0655ca2bde818be9f391c1"
+    },
+    "results/biological_cases/publication_v3_tier_a_annotation/independent_audit.json": {
+      "bytes": 2200,
+      "sha256": "b75062ab385fcf6ae7863a80eba1ff2dfbcaece220c044394515104315323014"
+    },
+    "metadata/publication_v3_tier_a_literature_evidence.tsv": {
+      "bytes": 4234,
+      "sha256": "17f869446dc5d3d92de6bf9e95003558cee0c0378aaadd56ce54fe33a3cf992b"
+    },
+    "scripts/255_build_publication_v3_tier_a_mechanism_evidence.py": {
+      "bytes": 25563,
+      "sha256": "b43b99b32b280a2ff1bb22f686948890091b27ed196586ac69df9dcad3fcdf01"
+    },
+    "scripts/256_verify_publication_v3_tier_a_mechanism_evidence.py": {
+      "bytes": 19756,
+      "sha256": "a3994e16f87281a30b0beec56dbe7030337929b018294258f9ab3ccaf1d45ac7"
+    },
+    "scripts/257_freeze_publication_v3_tier_a_mechanism_evidence.py": {
+      "bytes": 6046,
+      "sha256": "47b5f8951c08da39631ae7ca5b522c29f729cf578208c3aa518199ae25bd548c"
+    },
+    "scripts/258_validate_publication_v3_tier_a_mechanism_evidence_freeze.py": {
+      "bytes": 2690,
+      "sha256": "ea5c04ab8e3c5d1691f62f68ab76239e02c5945570950369fcc5a86817594f62"
+    }
+  },
+  "frozen_artifacts": {
+    "metadata/publication_v3_tier_a_evidence_matrix.tsv": {
+      "bytes": 9417,
+      "sha256": "6fbb8cfcd565aaf4312fe9516f8f5996d7f0ae490dd6b05f2d0d4caa7f07ce5b"
+    },
+    "reports/PUBLICATION_V3_TIER_A_MECHANISM_EVIDENCE_20260717_CN.md": {
+      "bytes": 7556,
+      "sha256": "65303672df2a9951812ec87378cb80a49d8106424f52bf70126c7bfef051e69f"
+    },
+    "figures/publication_v3_tier_a_evidence_matrix.png": {
+      "bytes": 630046,
+      "sha256": "e6f2334db379e9552c1bb9ee04d746e43996d8df2b1df36bca0dcf4dc666513b"
+    },
+    "figures/publication_v3_tier_a_evidence_matrix.pdf": {
+      "bytes": 43701,
+      "sha256": "ebb09287d0342f9b4e7e82e37ff913fffef68aab3e11491acb9a2dd7a834c7fe"
+    },
+    "figures/publication_v3_tier_a_evidence_matrix.svg": {
+      "bytes": 227881,
+      "sha256": "583591fb3f352005b6b93fbcffccd598fcffbc55bb7abee6ce920796bc91fb9f"
+    },
+    "results/biological_cases/publication_v3_tier_a_mechanism_evidence/provenance.json": {
+      "bytes": 3876,
+      "sha256": "84bf910006d6e45220e61186ef8ed61c9ec6997f5dae17db8338812056bff4ea"
+    },
+    "results/biological_cases/publication_v3_tier_a_mechanism_evidence/independent_audit.json": {
+      "bytes": 2041,
+      "sha256": "6e224ab80ad860dd3e988cbcd3ab90ff4e24e37c05621968bb9659412d5c19df"
+    }
+  },
+  "violations": []
+}

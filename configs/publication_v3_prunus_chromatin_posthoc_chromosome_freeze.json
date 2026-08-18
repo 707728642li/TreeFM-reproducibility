@@ -1,0 +1,24 @@
+{
+  "status": "frozen",
+  "manifest_version": 1,
+  "created_utc": "2026-07-16T23:34:09.7419981Z",
+  "scope": "posthoc_prunus_chromatin_chromosome_robustness_only",
+  "posthoc": true,
+  "artifact_sha256": {
+    "docs/publication_v3_prunus_chromatin_posthoc_chromosome_robustness_note.md": "033fd4a6dc66ab50595997bb2008e94748c6ea5b4375ba56587c024f0d721413",
+    "scripts/182_analyze_prunus_chromatin_chromosome_robustness.py": "a0a97590ca7ab69abe9dd242321544e92350cfd8d1598e062c4762f5f5eb9c38",
+    "results/biological_cases/prunus_publication_v3_chromatin_replication/gse190586_binary_gene_calls.tsv.gz": "20d3d0ca9b2f404c4d1a2c7b6d858428592152846d7cc2d2e3dec812da71d661",
+    "results/biological_cases/prunus_publication_v3_chromatin_replication/summary.json": "ffddf8d9d8709bf1f17491640b7260ca67cf1757b5d9a7d9605f101b40535fba",
+    "results/metrics/publication_v3_prunus_chromatin_binary_verification.json": "bac270168f25bbfb89b50d7078e710c9403df159c12f210a2abf57864ea7bf3f"
+  },
+  "chromosome_conditioned_permutations": 10000,
+  "leave_one_chromosome_permutations_each": 10000,
+  "chromosomes": ["Pp01", "Pp02", "Pp03", "Pp04", "Pp05", "Pp06", "Pp07", "Pp08"],
+  "primary_result_reclassification_allowed": false,
+  "pyrus_mechanism_rescue_allowed": false,
+  "dapt_model_selection_allowed": false,
+  "malus_accessed": false,
+  "malus_access_allowed": false,
+  "chromosome_specific_results_inspected_before_freeze": false,
+  "input_fingerprint": "9ce4348d34d459810a9779f503d4d9f8472347eaa5a3c9639ca04c6408996d88"
+}
